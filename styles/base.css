@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #2b5a8b; /* Un azul oscuro similar al de la imagen */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#course-title {
+    font-family: 'Ancizar Serif', serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#course-title span {
+    color: #e0e000; /* Un color amarillo/verde para el nombre, similar al de la imagen */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Color de fondo para la barra de navegación */
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555; /* Efecto hover */
+}
+
+
+
+
+/* Estilos para el main */
+main {
+    max-width: 960px; /* Ancho limitado como en el requisito */
+    margin: 20px auto; /* Centrado horizontal */
+    padding: 0 20px;
+}
+
+/* Estilos para las tarjetas (sections con class="card") */
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #2b5a8b;
+    margin-top: 0;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto; /* Centrar imagen y añadir espacio */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #2b5a8b; /* Mismo color que el encabezado */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+
+
+/* Estilos para el layout de las tarjetas con CSS Grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    gap: 20px; /* Espacio entre las tarjetas */
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+}
+
+/* Estilos para el layout principal */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para las tarjetas */
+    gap: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Sección de presentación (Nombre e Imagen) */
+.hero-section {
+    grid-column: 1 / -1; /* Hace que esta sección ocupe todas las columnas (de la 1 a la última) */
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre la imagen y las tarjetas de abajo */
+}
+
+.hero-section h1 {
+    margin-bottom: 20px; /* Espacio entre el nombre y la imagen */
+}
+
+.hero-section img {
+    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor */
+    max-height: 300px; /* Altura máxima para que no sea demasiado grande */
+    object-fit: cover; /* La imagen cubre el área sin deformarse, puede que se recorte un poco */
+    border-radius: 10px; /* Bordes ligeramente redondeados para un look moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Apila todo en una sola columna */
+    }
+}
