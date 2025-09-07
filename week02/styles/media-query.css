@@ -1,38 +1,32 @@
-/* Importa la fuente Roboto de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap' );
 
-/* 1. Estilos generales para el cuerpo de la página */
 body {
-    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto como se solicitó */
+    font-family: 'Roboto', sans-serif;
 }
 
-/* 2. Regla combinada para header, main y footer */
 header, main, footer {
-    max-width: 640px;               /* Ancho máximo de 640px */
-    margin: 1rem auto;              /* Centrado en la página con 1rem de margen superior/inferior */
-    border: 1px skyblue;         /* Borde tenue (faint border) */
-    padding: 1rem;                  /* Relleno apropiado de 1rem */
-    background-color: #e0f7fa;      /* Un color de fondo azulado claro (light cyan) */
+    max-width: 640px;              
+    margin: 1rem auto;              
+    border: 1px skyblue;        
+    padding: 1rem;                  
+    background-color: #e0f7fa; 
 }
 
 header {
     text-align: center;
 }
 
-/* 3. Estilos para el elemento main usando CSS Grid */
 main {
-    display: grid;                  /* Declara el main como un contenedor de cuadrícula */
-    grid-template-columns: 1fr;     /* Define una sola columna que ocupa todo el espacio disponible */
-    gap: 1rem;                      /* Espacio uniforme de 1rem entre los elementos de la cuadrícula (las secciones) */
+    display: grid;                  
+    grid-template-columns: 1fr;     
+    gap: 1rem;                     
 }
 
-/* 4. Estilos para los elementos section dentro del main */
 section {
-    padding: 1rem;                  /* Relleno para separar el contenido del borde */
-    background-color: #ffffff;      /* Fondo blanco para que resalten sobre el fondo azulado del main */
+    padding: 1rem;                  
+    background-color: #ffffff;      
 }
 
-/* Estilo adicional para el footer para centrar el texto */
 footer {
     text-align: center;
 }
