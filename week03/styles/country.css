@@ -1,0 +1,138 @@
+/* General Body and Font Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #d32f2f; /* Fallback color */
+}
+
+/* Header Styling */
+header {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Ancizar Serif', serif;
+}
+
+#page-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+/* Main Content Layout */
+main {
+    position: relative;
+}
+
+/* Hero Image Section */
+.hero-section {
+    position: relative;
+    line-height: 0; /* Removes extra space below the image */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: #00695c;
+    z-index: 10;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+/* Data and Weather Sections General Styling */
+.country-data, .Weather {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.country-data h2, .Weather h2 {
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.country-data ul, .Weather ul {
+    list-style: none;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.country-data li, .Weather li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.country-data span, .Weather span {
+    font-weight: bold;
+}
+
+/* Specific Positioning for Data Section */
+.country-data {
+    top: 30px;
+    left: 30px;
+}
+
+/* Specific Positioning and Styling for Weather Section */
+.Weather {
+    bottom: 100px;
+    right: 30px;
+}
+
+.Weather h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Weather .svg-container {
+    text-align: center; 
+    margin-top: 15px;   
+}
+
+.Weather svg {
+    width: 60px;       
+    height: 60px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #page-title {
+        font-size: 2.5rem;
+    }
+
+    .country-data, .Weather {
+        position: static;
+        width: auto;
+        margin: 20px;
+        border-radius: 10px;
+    }
+}
