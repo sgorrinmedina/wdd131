@@ -213,6 +213,6 @@ footer p {
     }
 
     footer {
-        margin-top: 0; /* Remove top margin on desktop */
+        margin-top: 0; 
     }
 }
