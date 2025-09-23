@@ -1,3 +1,13 @@
+:root {
+    --red: #d32f2f;
+    --yellow: #ffeb3b;
+    --blue: #1976d2;
+    --green: #388e3c;
+    --navy: #0b15a7;
+    --light-gray: #f5f5f5;
+}
+
+
 /* 1. BASE AND FONT STYLES (for both mobile and desktop) */
 body {
     font-family: 'Roboto', sans-serif;
