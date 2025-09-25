@@ -29,3 +29,17 @@ document.addEventListener('DOMContentLoaded', displayWindChill);
 
 
 
+const numbers = [1,2,3,4];
+
+
+const numbersMap = numbers.map(number ) 
+
+
+const courses = [
+  "CSE 110",
+  "CSE 111",
+  "WDD 130",
+  "WDD 131",
+  "WDD 231",
+  "CSE 210"
+];
