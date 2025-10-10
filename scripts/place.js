@@ -28,6 +28,8 @@ function displayWindChill() {
 document.addEventListener('DOMContentLoaded', displayWindChill);
 
 
+<<<<<<< HEAD
+=======
 
 const numbers = [1,2,3,4];
 
@@ -43,3 +45,4 @@ const courses = [
   "WDD 231",
   "CSE 210"
 ];
+>>>>>>> 8c4ef45f4f1410a4d1f6f57323fe220d6413dbe1
