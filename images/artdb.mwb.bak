@@ -1,0 +1,184 @@
+USE artdb;
+SHOW TABLES;
+DESCRIBE artist;
+SELECT  COUNT(*) FROM artist;
+SHOW VARIABLES LIKE 'autocommit';
+
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema artdb
+-- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `artdb` ;
+
+-- -----------------------------------------------------
+-- Schema artdb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `artdb` DEFAULT CHARACTER SET utf8 ;
+USE `artdb` ;
+
+-- -----------------------------------------------------
+-- Table `artdb`.`artist`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `artdb`.`artist` ;
+
+CREATE TABLE IF NOT EXISTS `artdb`.`artist` (
+  `artist_id` INT NOT NULL,
+  `artist_name` VARCHAR(45) NOT NULL,
+  `lname` VARCHAR(45) NOT NULL,
+  `mname` VARCHAR(45) NULL,
+  `country` VARCHAR(45) NOT NULL,
+  `dob` INT NOT NULL,
+  `dod` INT NULL,
+  `is_local` ENUM('y', 'n') NOT NULL,
+  PRIMARY KEY (`artist_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `artdb`.`artwork`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `artdb`.`artwork` ;
+
+CREATE TABLE IF NOT EXISTS `artdb`.`artwork` (
+  `artwork_id` INT NOT NULL AUTO_INCREMENT,
+  `period` VARCHAR(45) NOT NULL,
+  `type` ENUM('watercolor', 'tempra', 'oil') NOT NULL,
+  `year` INT NOT NULL,
+  `title` VARCHAR(45) NOT NULL,
+  `file` VARCHAR(45) NOT NULL,
+  `artist_id` INT NOT NULL,
+  PRIMARY KEY (`artwork_id`),
+  INDEX `fk_artwork_artist_idx` (`artist_id` ASC) VISIBLE,
+  CONSTRAINT `fk_artwork_artist`
+    FOREIGN KEY (`artist_id`)
+    REFERENCES `artdb`.`artist` (`artist_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `artdb`.`keyword`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `artdb`.`keyword` ;
+
+CREATE TABLE IF NOT EXISTS `artdb`.`keyword` (
+  `keyword_id` INT NOT NULL AUTO_INCREMENT,
+  `key_name` VARCHAR(25) NOT NULL,
+  PRIMARY KEY (`keyword_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `artdb`.`artwork_has_keyword`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `artdb`.`artwork_has_keyword` ;
+
+CREATE TABLE IF NOT EXISTS `artdb`.`artwork_has_keyword` (
+  `artwork_id` INT NOT NULL,
+  `keyword_id` INT NOT NULL,
+  PRIMARY KEY (`artwork_id`, `keyword_id`),
+  INDEX `fk_artwork_has_keyword_keyword1_idx` (`keyword_id` ASC) VISIBLE,
+  INDEX `fk_artwork_has_keyword_artwork1_idx` (`artwork_id` ASC) VISIBLE,
+  CONSTRAINT `fk_artwork_has_keyword_artwork1`
+    FOREIGN KEY (`artwork_id`)
+    REFERENCES `artdb`.`artwork` (`artwork_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_artwork_has_keyword_keyword1`
+    FOREIGN KEY (`keyword_id`)
+    REFERENCES `artdb`.`keyword` (`keyword_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+
+
+
+
+
+
+SELECT * FROM artist;
+
+INSERT INTO artist (artist_id, artist_name, lname, mname, country, dob, dod, is_local) VALUES (1, 'Vincent', 'van Gogh', NULL, 'France', 1853, 1890, 'n');
+INSERT INTO artist (artist_id, artist_name, lname, mname, country, dob, dod, is_local) VALUES (2, 'Rembrandt', 'van Rijn', 'Harmenszoon', 'Netherlands', 1606, 1669, 'n');
+INSERT INTO artist (artist_id, artist_name, lname, mname, country, dob, dod, is_local) VALUES (3, 'Leonardo', 'da Vinci', NULL, 'Italy', 1452, 1519, 'n');
+INSERT INTO artist (artist_id, artist_name, lname, mname, country, dob, dod, is_local) VALUES (4, 'Venture', 'Coy', 'Lonzo', 'United States', 1965, NULL, 'y');
+INSERT INTO artist (artist_id, artist_name, lname, mname, country, dob, dod, is_local) VALUES (5, 'Deborah', 'Gill', NULL, 'United States', 1970, NULL, 'y');
+INSERT INTO artist (artist_id, artist_name, lname, mname, country, dob, dod, is_local) VALUES (6, 'Claude', 'Monet', NULL, 'France', 1840, 1926, 'n');
+INSERT INTO artist (artist_id, artist_name, lname, mname, country, dob, dod, is_local) VALUES (7, 'Pablo', 'Picasso', NULL, 'Spain', 1904, 1973, 'n');
+INSERT INTO artist (artist_id, artist_name, lname, mname, country, dob, dod, is_local) VALUES (8, 'Michelangelo', 'Simoni', 'di Lodovico', 'Italy', 1475, 1564, 'n');
+
+SELECT * FROM artwork;
+
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (1, 'Impressionism', 'Oil', 1889.0, 'Irises', 'irises.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (2, 'Post-Impressionism', 'Oil', 1889.0, 'The Starry Night', 'starrynight.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (3, 'Post-impressionism', 'Oil', 1888.0, 'Sunflowers', 'sunflowers.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (4, 'Baroque', 'Oil', 1642.0, 'Night Watch', 'nightwatch.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (5, 'Dutch Golden Age', 'Oil', 1633.0, 'Storm on the Sea of Galilee', 'stormgalilee.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (6, 'High Renaissance', 'Oil', 1508.0, 'Head of a Woman', 'headwoman.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (7, 'Renaissance', 'Tempra ', 1498.0, 'Last Supper', 'lastsupper.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (8, 'Renaissance', 'Oil', 1517.0, 'Mona Lisa', 'monalisa.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (9, 'Modern', 'Oil', 2005.0, 'Hillside Stream', 'hillsidestream.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (10, 'Modern', 'Oil', 1992.0, 'Old Barn', 'oldbarn.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (11, 'Modern', 'Watercolor', 1999.0, 'Beach Baby', 'beachbaby.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (12, 'Impressionism', 'Oil', 1866.0, 'Women in the Garden', 'womengarden.jpg', NULL);
+INSERT INTO Artworks (artwork_id, period, type, year, title, file, artist_id) VALUES (13, 'Modern', 'Oil', 1904.0, 'Old Guitarist', 'guitarist.jpg', NULL);
+ 
+SELECT * FROM keyword;
+
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('1', 'flowers');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('2', 'blue');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('3', 'landscape');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('4', 'girl');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('5', 'people');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('6', 'battle');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('7', 'boat');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('8', 'water');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('9', 'christ');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('10', 'food');
+INSERT INTO `artdb`.`keyword` (`keyword_id`, `key_name`) VALUES ('11', 'landscape');
+    
+SELECT * FROM artwork_has_keyword;
+
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('1', '1');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('2', '2');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('2', '3');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('3', '1');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('4', '4');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('4', '5');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('4', '6');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('5', '7');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('5', '8');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('5', '5');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('5', '9');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('6', '4');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('6', '5');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('7', '10');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('7', '5');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('7', '9');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('8', '4');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('8', '5');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('9', '11');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('9', '8');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('10', '11');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('11', '8');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('11', '5');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('11', '12');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('12', '11');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('12', '5');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('12', '1');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('13', '2');
+INSERT INTO `artdb`.`artwork_has_keyword` (`artwork_id`, `keyword_id`) VALUES ('13', '5');
