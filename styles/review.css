@@ -1,0 +1,313 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --border-color: #ddd;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --font-main: 'Roboto', sans-serif;
+  --font-heading: 'Ancizar Serif', serif;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  line-height: 1.6;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Main Content Styles */
+main {
+  flex: 1;
+  max-width: 600px;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+}
+
+/* Label Styles */
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+label span {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+select {
+  cursor: pointer;
+  background-color: white;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Rating Styles */
+.rating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.rating label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  margin: 0;
+}
+
+.rating label:hover {
+  background-color: var(--light-bg);
+}
+
+.rating input[type="radio"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+/* Checkbox Styles */
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+fieldset label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+fieldset label:has(input[type="checkbox"]):hover {
+  background-color: var(--light-bg);
+}
+
+fieldset p {
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Confirmation Page Styles */
+main p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main p:first-child {
+  font-size: 1.3rem;
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+#reviewCounter {
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 1.2em;
+}
+
+main a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.1s;
+  font-weight: 500;
+}
+
+main a:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+main a:active {
+  transform: translateY(0);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
+
+  legend {
+    font-size: 1.1rem;
+  }
+
+  .rating {
+    gap: 0.3rem;
+  }
+
+  input[type="submit"] {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1.5rem 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  fieldset {
+    padding: 0.75rem;
+  }
+}

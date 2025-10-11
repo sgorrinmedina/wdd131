@@ -7,7 +7,7 @@
   <meta name="author" content="Sebastian Gorrin">
   <title>Product Review Form</title>
   <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/getdates.js" defer></script>
   <script src="scripts/form.js" defer></script>
 </head>
@@ -24,17 +24,17 @@
         <!-- Product Name -->
         <label for="pname">Product Name</label>
         <select id="pname" name="product-name" required>
-          <option value="" disabled selected>Select a product...</option>
+          <option value="" disabled selected>Select a Product ...</option>
         </select>
 
         <!-- Overall Rating -->
         <label>Overall Rating</label>
         <div class="rating">
-          <label><input type="radio" name="rating" value="1" required> ☆</label>
-          <label><input type="radio" name="rating" value="2"> ☆☆</label>
-          <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
-          <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
-          <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+          <label><input type="radio" id="rating1" name="rating" value="1" required> ☆</label>
+          <label><input type="radio" id="rating2" name="rating" value="2"> ☆☆</label>
+          <label><input type="radio" id="rating3" name="rating" value="3"> ☆☆☆</label>
+          <label><input type="radio" id="rating4" name="rating" value="4"> ☆☆☆☆</label>
+          <label><input type="radio" id="rating5" name="rating" value="5"> ☆☆☆☆☆</label>
         </div>
 
         <!-- Date of Installation -->
@@ -42,7 +42,7 @@
         <input type="date" id="idate" name="installation-date" required>
 
         <!-- Useful Features -->
-        <label>Which features did you find useful?</label>
+        <label>Which features did you find useful in the product?</label>
         <p>(Check all that apply)</p>
         <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
         <label><input type="checkbox" id="feature2" name="features" value="Ease of Use"> Ease of Use</label>
@@ -50,11 +50,11 @@
         <label><input type="checkbox" id="feature4" name="features" value="Design"> Design</label>
 
         <!-- Written Review -->
-        <label for="wReview">Written Review (optional)</label>
+        <label for="wReview">Written Review <span>(optional)</span></label>
         <textarea id="wReview" name="written-review" rows="5" placeholder="Write your review..."></textarea>
 
         <!-- User Name -->
-        <label for="uName">Your Name (optional)</label>
+        <label for="uName">Your Name <span>(optional)</span></label>
         <input type="text" id="uName" name="user-name">
 
       </fieldset>
