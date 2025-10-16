@@ -57,3 +57,11 @@ for (let i = 1; i <= n; i++ ) {
 	item.textContent = nextdaystring;
 	output[0].appendChild(item);
 }
+
+
+
+function calculate(a, b, callback) {
+  callback(a + b);
+}
+
+calculate(2, 3, function(result) 
