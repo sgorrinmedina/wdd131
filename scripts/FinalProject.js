@@ -1,7 +1,6 @@
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 
-<<<<<<< HEAD
 const hamburgerButton = document.getElementById('hamburger-menu');
 const navigation = document.querySelector('nav');
 
@@ -9,13 +8,10 @@ hamburgerButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
     hamburgerButton.classList.toggle('open');
 });
-=======
->>>>>>> b80cffdf42af9574a11349b1c6cee2c3e279ead0
 
 const samples = [
   {
     imageUrl:"https://grupoinfeccsomamfyc.wordpress.com/wp-content/uploads/2017/10/gardnerella.jpg?w=254&h=228",
-<<<<<<< HEAD
     title: "V",
     description: "Clue cells in a group of cells"
   },
@@ -140,111 +136,19 @@ const samples = [
 
 const samplesContainer = document.getElementById('samples-container');
 const webPageTitle = document.getElementById('webpageTitle'); // SELECT THE H1 ELEMENT
-=======
-    title: "VBS",
-    description: ""
-  },
-  {
-    imageUrl:"https://static.elsevier.es/multimedia/0210573X/0000003600000006/v1_201305030911/S0210573X09000859/v1_201305030911/es/main.assets/gr1.jpeg",
-    title: "VBS",
-    description: ""
-  },
-  {
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg",
-    title: "VBS",
-    description: ""
-  },
-  {
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg",
-    title: "VBS",
-    description: ""
-  },
-  {
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg",
-    title: "VBS",
-    description: ""
-  },
-  {
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg",
-    title: "VBS",
-    description: ""
-  },
-  {
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
-    title: "VBS",
-    description: ""
-  },
-   {
-    imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/auckland-new-zealand-temple/auckland-new-zealand-temple-56277-main.jpg",
-    title: "CS",
-    description: ""
-  },
-  {
-    imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/bangkok-thailand-temple/bangkok-thailand-temple-40037-main.jpg",
-    title: "CS",
-    description: ""
-  },
-  {
-    imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/bentonville-arkansas-temple/bentonville-arkansas-temple-55568-main.jpg",
-    title: "CS",
-    description: ""
-  },
-  // Add more temple objects here...
-];
-
-
-// Assuming you have a container in your HTML
-const samplesContainer = document.getElementById('samples-container');
-
-// Loop through each temple and create a card
-samples.forEach(sample => {
-  // Create a card container
-  const card = document.createElement('div');
-  card.className = 'sample-card';
-
-  // Create and append the temple name
-  const description = document.createElement('p');
-  description.textContent = sample.description;
-  card.appendChild(description);
-
-  // Create and append the image
-  const image = document.createElement('img');
-  image.src = sample.imageUrl;
-  image.alt = sample.title;
-  image.loading = 'lazy';
-  card.appendChild(image);
-
-  // Append the card to the container
-  samplesContainer.appendChild(card);
-});
-
->>>>>>> b80cffdf42af9574a11349b1c6cee2c3e279ead0
 
 // Function to clear the current cards
 function clearSampleCards() {
     samplesContainer.innerHTML = '';
 }
 
-<<<<<<< HEAD
 // Function to display an array of samples
-=======
-// Function to display an array of temples
->>>>>>> b80cffdf42af9574a11349b1c6cee2c3e279ead0
 function displaySamples(array) {
     clearSampleCards();
     array.forEach(sample => {
         const card = document.createElement('div');
         card.className = 'sample-card';
 
-<<<<<<< HEAD
         // Create and append the image FIRST
         const image = document.createElement('img');
         image.src = sample.imageUrl;
@@ -264,26 +168,6 @@ function displaySamples(array) {
 
 // Initial display of all samples with a default title
 webPageTitle.textContent = 'All Samples';
-=======
-  // Create and append the temple name
-  const description = document.createElement('p');
-  description.textContent = sample.description;
-  card.appendChild(description);
-
-  // Create and append the image
-  const image = document.createElement('img');
-  image.src = sample.imageUrl;
-  image.alt = sample.title;
-  image.loading = 'lazy';
-  card.appendChild(image);
-
-  // Append the card to the container
-  samplesContainer.appendChild(card);
-    });
-}
-
-// Initial display of all temples
->>>>>>> b80cffdf42af9574a11349b1c6cee2c3e279ead0
 displaySamples(samples);
 
 // Grab all nav links
@@ -292,7 +176,6 @@ const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
-<<<<<<< HEAD
         const filter = link.textContent.trim();
 
         let filteredSamples = [];
@@ -322,31 +205,6 @@ navLinks.forEach(link => {
 
         // UPDATE THE H1 ELEMENT
         webPageTitle.textContent = titleText;
-        displaySamples(filteredSamples);
-    });
-});
-=======
-        const filter = link.textContent.trim(); // Get the text of the link
-
-        let filteredSamples = [];
-
-        switch(filter) {
-            case 'Bacterial Vaginosis':
-                filteredSemples = samples.filter(s => s.title.includes('VB'));
-                break;
-            case 'Candida sp':
-                filteredSemples = samples.filter(s => s.title.includes('CS'));
-                break;
-            case 'Trichomonas vaginalis':
-                filteredSemples = samples.filter(s => s.title.includes('TV'));
-                break;
-            case 'LSIL':
-                filteredSemples = samples.filter(s => s.title.includes('LIEBG'));
-                break;
-            default:
-                filteredSemples = samples;
-        }
-
         displaySamples(filteredSamples);
     });
 });
