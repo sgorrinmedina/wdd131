@@ -13,18 +13,18 @@ const samples = [
   {
     imageUrl:"images/20251031_133621.jpg",
     title: "V",
-    description: "Clue cells in a group of cells"
+    description: ""
   },
   {
     imageUrl:"images/20251031_134246.jpg",
     title: "V",
-    description: "Triangle of clue cells"
+    description: ""
   },
   {
     imageUrl:
     "images/20251031_134614.jpg",
     title: "V",
-    description: "More clue cells"
+    description: ""
   },
   {
     imageUrl:
@@ -40,7 +40,7 @@ const samples = [
   {
     imageUrl: "images/20251031_135422.jpg",
     title: "V",
-    description: "Comparison of a normal cell and a clue cell"
+    description: ""
   },
   {
     imageUrl: "images/20250916_115629.jpg",
