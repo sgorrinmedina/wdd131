@@ -1,126 +1,183 @@
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 
+const hamburgerButton = document.getElementById('hamburger-menu');
+const navigation = document.querySelector('nav');
+
+hamburgerButton.addEventListener('click', () => {
+    navigation.classList.toggle('open');
+    hamburgerButton.classList.toggle('open');
+});
 
 const samples = [
   {
-    imageUrl:"https://grupoinfeccsomamfyc.wordpress.com/wp-content/uploads/2017/10/gardnerella.jpg?w=254&h=228",
-    title: "VBS",
-    description: ""
+    imageUrl:"images/20251031_133621.jpg",
+    title: "V",
+    description: "Clue cells in a group of cells"
   },
   {
-    imageUrl:"https://static.elsevier.es/multimedia/0210573X/0000003600000006/v1_201305030911/S0210573X09000859/v1_201305030911/es/main.assets/gr1.jpeg",
-    title: "VBS",
-    description: ""
-  },
-  {
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg",
-    title: "VBS",
-    description: ""
+    imageUrl:"images/20251031_134246.jpg",
+    title: "V",
+    description: "Triangle of clue cells"
   },
   {
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg",
-    title: "VBS",
-    description: ""
+    "images/20251031_134614.jpg",
+    title: "V",
+    description: "More clue cells"
   },
   {
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg",
-    title: "VBS",
+    "images/20251031_134951.jpg",
+    title: "V",
     description: ""
   },
   {
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg",
-    title: "VBS",
+    imageUrl: "images/20251031_135314.jpg",
+    title: "V",
     description: ""
   },
   {
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
-    title: "VBS",
+    imageUrl: "images/20251031_135422.jpg",
+    title: "V",
+    description: "Comparison of a normal cell and a clue cell"
+  },
+  {
+    imageUrl: "images/20250916_115629.jpg",
+    title: "C",
     description: ""
   },
    {
-    imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/auckland-new-zealand-temple/auckland-new-zealand-temple-56277-main.jpg",
-    title: "CS",
+    imageUrl:"images/20250916_122327.jpg",
+    title: "C",
     description: ""
   },
   {
-    imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/bangkok-thailand-temple/bangkok-thailand-temple-40037-main.jpg",
-    title: "CS",
+    imageUrl: "images/20250916_123852.jpg",
+    title: "C",
     description: ""
   },
   {
-    imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/bentonville-arkansas-temple/bentonville-arkansas-temple-55568-main.jpg",
-    title: "CS",
+    imageUrl: "images/20250916_125452.jpg",
+    title: "C",
     description: ""
   },
-  // Add more temple objects here...
+  {
+    imageUrl: "images/20250916_131832.jpg",
+    title: "C",
+    description: ""
+  },
+  {
+    imageUrl: "images/20250925_135240.jpg",
+    title: "C",
+    description: ""
+  },
+  {
+    imageUrl: "images/IMG-20251029-WA0027.jpg",
+    title: "T",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251031_125340.jpg",
+    title: "T",
+    description: ""
+  },
+  {
+    imageUrl: "images/20250925_144712.jpg",
+    title: "T",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251002_114318.jpg",
+    title: "T",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251002_121330.jpg",
+    title: "T",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251017_121413.jpg",
+    title: "T",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251017_124327.jpg",
+    title: "T",
+    description: ""
+  },
+  {
+    imageUrl: "images/IMG_7645.jpg",
+    title: "T",
+    description: ""
+  },
+  {
+    imageUrl: "images/20250916_134016.jpg",
+    title: "LSIL",
+    description: ""
+  },
+  {
+    imageUrl: "images/20250916_140259.jpg",
+    title: "LSIL",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251002_130607.jpg",
+    title: "LSIL",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251002_125315.jpg",
+    title: "LSIL",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251002_133712.jpg",
+    title: "LSIL",
+    description: ""
+  },
+  {
+    imageUrl: "images/20251017_130615.jpg",
+    title: "LSIL",
+    description: ""
+  },
 ];
 
-
-// Assuming you have a container in your HTML
 const samplesContainer = document.getElementById('samples-container');
-
-// Loop through each temple and create a card
-samples.forEach(sample => {
-  // Create a card container
-  const card = document.createElement('div');
-  card.className = 'sample-card';
-
-  // Create and append the temple name
-  const description = document.createElement('p');
-  description.textContent = sample.description;
-  card.appendChild(description);
-
-  // Create and append the image
-  const image = document.createElement('img');
-  image.src = sample.imageUrl;
-  image.alt = sample.title;
-  image.loading = 'lazy';
-  card.appendChild(image);
-
-  // Append the card to the container
-  samplesContainer.appendChild(card);
-});
-
+const webPageTitle = document.getElementById('webpageTitle'); // SELECT THE H1 ELEMENT
 
 // Function to clear the current cards
 function clearSampleCards() {
     samplesContainer.innerHTML = '';
 }
 
-// Function to display an array of temples
+// Function to display an array of samples
 function displaySamples(array) {
     clearSampleCards();
     array.forEach(sample => {
         const card = document.createElement('div');
         card.className = 'sample-card';
 
-  // Create and append the temple name
-  const description = document.createElement('p');
-  description.textContent = sample.description;
-  card.appendChild(description);
+        // Create and append the image FIRST
+        const image = document.createElement('img');
+        image.src = sample.imageUrl;
+        image.alt = sample.title;
+        image.loading = 'lazy';
+        card.appendChild(image);
 
-  // Create and append the image
-  const image = document.createElement('img');
-  image.src = sample.imageUrl;
-  image.alt = sample.title;
-  image.loading = 'lazy';
-  card.appendChild(image);
+        // Create and append the description AFTER the image
+        const description = document.createElement('p');
+        description.textContent = sample.description;
+        card.appendChild(description);
 
-  // Append the card to the container
-  samplesContainer.appendChild(card);
+        // Append the card to the container
+        samplesContainer.appendChild(card);
     });
 }
 
-// Initial display of all temples
+// Initial display of all samples with a default title
+webPageTitle.textContent = 'Todas las Muestras';
 displaySamples(samples);
 
 // Grab all nav links
@@ -129,27 +186,35 @@ const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
-        const filter = link.textContent.trim(); // Get the text of the link
+        const filter = link.textContent.trim();
 
         let filteredSamples = [];
+        let titleText = '';
 
         switch(filter) {
-            case 'Bacterial Vaginosis':
-                filteredSemples = samples.filter(s => s.title.includes('VB'));
+            case 'Vaginosis Bacteriana':
+                titleText = 'Vaginosis Bacteriana (VB)';
+                filteredSamples = samples.filter(s => s.title === 'V'); // Use === for exact match
                 break;
             case 'Candida sp':
-                filteredSemples = samples.filter(s => s.title.includes('CS'));
+                titleText = 'Candida sp (Candidiasis)';
+                filteredSamples = samples.filter(s => s.title === 'C');
                 break;
-            case 'Trichomonas vaginalis':
-                filteredSemples = samples.filter(s => s.title.includes('TV'));
+            case 'Trichomonas Vaginalis': // FIXED: Capital V in Vaginalis
+                titleText = 'Trichomonas Vaginalis (TV)';
+                filteredSamples = samples.filter(s => s.title === 'T');
                 break;
             case 'LSIL':
-                filteredSemples = samples.filter(s => s.title.includes('LIEBG'));
+                titleText = 'Lesion Intraepitelial Escamosa de Bajo Grado (LSIL)';
+                filteredSamples = samples.filter(s => s.title === 'LSIL');
                 break;
             default:
-                filteredSemples = samples;
+                titleText = 'Todas las Muestras';
+                filteredSamples = samples;
         }
 
+        // UPDATE THE H1 ELEMENT
+        webPageTitle.textContent = titleText;
         displaySamples(filteredSamples);
     });
 });
