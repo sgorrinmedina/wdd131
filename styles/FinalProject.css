@@ -111,6 +111,7 @@ nav a {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     transition: color 0.3s;
+    align-items: center;
 }
 
 nav a:hover {
@@ -256,7 +257,7 @@ footer p {
     }
     
     #logo, #logo-fcs {
-        height: 40px;
+        display: none;
     }
 
     nav {
