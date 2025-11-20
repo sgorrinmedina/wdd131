@@ -13,134 +13,134 @@ const samples = [
   {
     imageUrl:"images/20251031_133621.jpg",
     title: "V",
-    description: "Tipo de muestra: Exo-endo. Cambios en la flora vaginal sugestivos de vaginosis bacteriana con presencia de celulas guía (Clue cells) y elementos inflamatorios (EI)"
+    description: "Lamina 001. Tipo de muestra: Exo-endo. Cambios en la flora vaginal sugestivos de vaginosis bacteriana con presencia de celulas guía (Clue cells) y elementos inflamatorios (EI)"
   },
   {
     imageUrl:"images/vaginosis 2.JPG",
     title: "V",
-    description: "Tipo de muestra: Exo-endo, celulas guía y EI con anfofilia"
+    description: "Lamina 002. Tipo de muestra: Exo-endo, celulas guía y Elementos inflamatorios con anfofilia"
   },
   {
     imageUrl:
     "images/20251031_134614.jpg",
     title: "V",
-    description: "Tipo de muestra: Exo-endo, celulas guía y EI"
+    description: "Lamina 003. Tipo de muestra: Exo-endo, celulas guía y Elementos inflamatorios"
   },
   {
     imageUrl:
     "images/20251031_134951.jpg",
     title: "V",
-    description: "Tipo de muestra: Exo-endo, clue cells y EI, obsérvese la variada coloración tanto eosinofila como cianofila"
+    description: "Lamina 004. Tipo de muestra: Exo-endo, clue cells y Elementos inflamatorios, obsérvese la variada coloración tanto eosinofila como cianofila"
   },
   {
     imageUrl: "images/20251031_135314.jpg",
     title: "V",
-    description: "Tipo de muestra: Exo-endo, celulas guía en fila"
+    description: "Lamina 005. Tipo de muestra: Exo-endo, celulas guía en fila"
   },
   {
     imageUrl: "images/20251031_135422.jpg",
     title: "V",
-    description: "Tipo de muestra: Exo-endo, presencia de clue cells, nótese los rebordes característicos de la VB"
+    description: "Lamina 006 (Extra). Tipo de muestra: Exo-endo, presencia de clue cells, nótese los rebordes característicos de la VB"
   },
   {
     imageUrl: "images/candida 1.jpg",
     title: "C",
-    description: "Tipo de muestra: Exo-endo, Elementos micóticos morfológicamente compatibles con Candida sp, presencia de esporas y EI"
+    description: "Lamina 007. Tipo de muestra: Exo-endo, Elementos micóticos morfológicamente compatibles con Candida sp, presencia de esporas y Elementos inflamatorios"
   },
    {
     imageUrl:"images/candida 2.jpg",
     title: "C",
-    description: "Tipo de muestra: Exo-endo, se observan esporas y polimorfonucleares abundantes"
+    description: "Lamina 008. Tipo de muestra: Exo-endo, se observan esporas y polimorfonucleares abundantes"
   },
   {
     imageUrl: "images/candida 3.JPG",
     title: "C",
-    description: "Tipo de muestra: Exo-endo, abundantes esporas y polimorfonucleares"
+    description: "Lamina 009. Tipo de muestra: Exo-endo, abundantes esporas y polimorfonucleares"
   },
   {
     imageUrl: "images/candida 4.JPG",
     title: "C",
-    description: "Tipo de muestra: Exo-endo, nótese las esporas que, aunque pequeñas, estan presentes"
+    description: "Lamina 010. Tipo de muestra: Exo-endo, nótese las esporas que, aunque pequeñas, estan presentes"
   },
   {
     imageUrl: "images/20250916_131832.jpg",
     title: "C",
-    description: "Tipo de muestra: Exo-endo, observese la hifa con forma curva y los escasos polimorfos"
+    description: "Lamina 011. Tipo de muestra: Exo-endo, observese la hifa con forma curva y los escasos polimorfos"
   },
   {
     imageUrl: "images/20250925_135240.jpg",
     title: "C",
-    description: "Tipo de muestra: Exo-endo, se observa el efecto inflamatorio en la binucleación producida por Candida sp"
+    description: "Lamina 012. Tipo de muestra: Exo-endo, se observa el efecto inflamatorio en la binucleación producida por Candida sp"
   },
   {
     imageUrl: "images/trichomonas 1.JPG",
     title: "T",
-    description: "Tipo de muestra: Exo-endo, Trichomonas vaginalis, con presencia de infiltrado inflamatorio abundante y microbiota bacteriana, nótese los trofozoítos piriformes"
+    description: "Lamina 013. Tipo de muestra: Exo-endo, Trichomonas vaginalis, con presencia de infiltrado inflamatorio abundante y microbiota bacteriana, nótese los trofozoítos piriformes"
   },
   {
     imageUrl: "images/20251031_125340.jpg",
     title: "T",
-    description: "Tipo de muestra: Exo-endo, trofozoíto observable en el apuntador"
+    description: "Lamina 014. Tipo de muestra: Exo-endo, trofozoíto observable en el apuntador"
   },
   {
     imageUrl: "images/trichomonas 3.JPG",
     title: "T",
-    description: "Tipo de muestra: Exo-endo, con abundante exudado inflamatorio"
+    description: "Lamina 015. Tipo de muestra: Exo-endo, con abundante exudado inflamatorio"
   },
   {
     imageUrl: "images/trichomonas 4.jpg",
     title: "T",
-    description: "Tipo de muestra: Exo-endo, obsérvese los trofozoítos más pequeños que una celula"
+    description: "Lamina 016. Tipo de muestra: Exo-endo, obsérvese los trofozoítos más pequeños que una célula"
   },
   {
     imageUrl: "images/20251002_121330.jpg",
     title: "T",
-    description: "Tipo de muestra: Exo-endo, Trichomonas vaginalis"
+    description: "Lamina 017. Tipo de muestra: Exo-endo, Trichomonas vaginalis"
   },
   {
     imageUrl: "images/trichomonas 6.JPG",
     title: "T",
-    description: "Tipo de muestra: Exo-endo, nótese los halos claros alrededor de los trofozoítos, un hallazgo característico pero no patognomónico de la trichomoniasis"
+    description: "Lamina 018. Tipo de muestra: Exo-endo, nótese los halos claros alrededor de los trofozoítos, un hallazgo característico pero no patognomónico de la trichomoniasis"
   },
   {
     imageUrl: "images/ffa2e439-a9c0-4e1d-8c77-18c9b517f21c.JPG",
     title: "T",
-    description: "Tipo de muestra: Exo-endo, véase las celulas endocervicales en grupo más abajo de las celulas con PMN alrededor"
+    description: "Lamina 019. Tipo de muestra: Exo-endo, véase las celulas endocervicales en grupo más abajo de las celulas con PMN alrededor"
   },
   {
     imageUrl: "images/2c179df1-36b6-4135-a0a0-7807c7bffb0e.JPG",
     title: "T",
-    description: "Tipo de muestra: Exo-endo, trofozoíto de Trichomonas vaginalis"
+    description: "Lamina 020. Tipo de muestra: Exo-endo, trofozoíto de Trichomonas vaginalis"
   },
   {
     imageUrl: "images/LSIL 1.JPG",
     title: "LSIL",
-    description: "Tipo de muestra: Exo-endo, anormalidad de células epiteliales agarndamiento nuclear leve, abundantes PMN, aumento de relación N/C y células anfofilicas"
+    description: "Lamina 021. Tipo de muestra: Exo-endo, anormalidad de células epiteliales agarndamiento nuclear leve, abundantes PMN, aumento de relación N/C y células anfofilicas"
   },
   {
     imageUrl: "images/LSIL 2.JPG",
     title: "LSIL",
-    description: "Tipo de muestra: Exo-endo, véase las celulas en grupo con bordes citoplásmicos bien definidos, PMN abundantes y binucleación"
+    description: "Lamina 022. Tipo de muestra: Exo-endo, véase las células en grupo con bordes citoplásmicos bien definidos, PMN abundantes y binucleación"
   },
   {
     imageUrl: "images/LSIL 3.JPG",
     title: "LSIL",
-    description: "Tipo de muestra: Exo-endo, nótese las células con elevada R N/C y cromatina irregular"
+    description: "Lamina 023. Tipo de muestra: Exo-endo, nótese las células con elevada Relación N/C y cromatina irregular"
   },
   {
     imageUrl: "images/LSIL 4.JPG",
     title: "LSIL",
-    description: "Tipo de muestra: Exo-endo, con notable aumento de los tamaños nucleares y relación N/C elevada"
+    description: "Lamina 024. Tipo de muestra: Exo-endo, con notable aumento de los tamaños nucleares y relación N/C elevada"
   },
   {
     imageUrl: "images/LSIL 5.jpg",
     title: "LSIL",
-    description: "Tipo de muestra: Exo-endo, véase la pequeña célula coilocitica justo arriba de la celula binucleada en el medio"
+    description: "Lamina 025. Tipo de muestra: Exo-endo, véase la pequeña célula coilocitica justo arriba de la célula binucleada en el medio"
   },
   {
     imageUrl: "images/LSIL 6.JPG",
     title: "LSIL",
-    description: "Tipo de muestra: Exo-endo, obsérvese la célula coilocitica binucleada cianófila con su característico halo perinuclear, hallazgo clave de una LIE-BG"
+    description: "Lamina 026. Tipo de muestra: Exo-endo, obsérvese la célula coilocitica binucleada cianófila con su característico halo perinuclear, hallazgo clave de una LIE-BG"
   },
 ];
 
