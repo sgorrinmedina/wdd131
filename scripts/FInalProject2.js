@@ -1,5 +1,5 @@
 document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+document.getElementById("lastModified").textContent = "Ultima Vez Modificado: " + document.lastModified;
 
 const hamburgerButton = document.getElementById('hamburger-menu');
 const navigation = document.querySelector('nav');
@@ -13,139 +13,180 @@ const samples = [
   {
     imageUrl:"images/20251031_133621.jpg",
     title: "V",
-    description: ""
+    description: "Tipo de muestra: Exo-endo. Cambios en la flora vaginal sugestivos de vaginosis bacteriana con presencia de celulas guía (Clue cells) y elementos inflamatorios (EI)"
   },
   {
-    imageUrl:"images/20251031_134246.jpg",
+    imageUrl:"images/vaginosis 2.JPG",
     title: "V",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, celulas guía y EI con anfofilia"
   },
   {
     imageUrl:
     "images/20251031_134614.jpg",
     title: "V",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, celulas guía y EI"
   },
   {
     imageUrl:
     "images/20251031_134951.jpg",
     title: "V",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, clue cells y EI, obsérvese la variada coloración tanto eosinofila como cianofila"
   },
   {
     imageUrl: "images/20251031_135314.jpg",
     title: "V",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, celulas guía en fila"
   },
   {
     imageUrl: "images/20251031_135422.jpg",
     title: "V",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, presencia de clue cells, nótese los rebordes característicos de la VB"
   },
   {
-    imageUrl: "images/20250916_115629.jpg",
+    imageUrl: "images/candida 1.jpg",
     title: "C",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, Elementos micóticos morfológicamente compatibles con Candida sp, presencia de esporas y EI"
   },
    {
-    imageUrl:"images/20250916_122327.jpg",
+    imageUrl:"images/candida 2.jpg",
     title: "C",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, se observan esporas y polimorfonucleares abundantes"
   },
   {
-    imageUrl: "images/20250916_123852.jpg",
+    imageUrl: "images/candida 3.JPG",
     title: "C",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, abundantes esporas y polimorfonucleares"
   },
   {
-    imageUrl: "images/20250916_125452.jpg",
+    imageUrl: "images/candida 4.JPG",
     title: "C",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, nótese las esporas que, aunque pequeñas, estan presentes"
   },
   {
     imageUrl: "images/20250916_131832.jpg",
     title: "C",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, observese la hifa con forma curva y los escasos polimorfos"
   },
   {
     imageUrl: "images/20250925_135240.jpg",
     title: "C",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, se observa el efecto inflamatorio en la binucleación producida por Candida sp"
   },
   {
-    imageUrl: "images/IMG-20251029-WA0027.jpg",
+    imageUrl: "images/trichomonas 1.JPG",
     title: "T",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, Trichomonas vaginalis, con presencia de infiltrado inflamatorio abundante y microbiota bacteriana, nótese los trofozoítos piriformes"
   },
   {
     imageUrl: "images/20251031_125340.jpg",
     title: "T",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, trofozoíto observable en el apuntador"
   },
   {
-    imageUrl: "images/20250925_144712.jpg",
+    imageUrl: "images/trichomonas 3.JPG",
     title: "T",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, con abundante exudado inflamatorio"
   },
   {
-    imageUrl: "images/20251002_114318.jpg",
+    imageUrl: "images/trichomonas 4.jpg",
     title: "T",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, obsérvese los trofozoítos más pequeños que una celula"
   },
   {
     imageUrl: "images/20251002_121330.jpg",
     title: "T",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, Trichomonas vaginalis"
   },
   {
-    imageUrl: "images/20251017_121413.jpg",
+    imageUrl: "images/trichomonas 6.JPG",
     title: "T",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, nótese los halos claros alrededor de los trofozoítos, un hallazgo característico pero no patognomónico de la trichomoniasis"
   },
   {
-    imageUrl: "images/20251017_124327.jpg",
+    imageUrl: "images/ffa2e439-a9c0-4e1d-8c77-18c9b517f21c.JPG",
     title: "T",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, véase las celulas endocervicales en grupo más abajo de las celulas con PMN alrededor"
   },
   {
-    imageUrl: "images/IMG_7645.jpg",
+    imageUrl: "images/2c179df1-36b6-4135-a0a0-7807c7bffb0e.JPG",
     title: "T",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, trofozoíto de Trichomonas vaginalis"
   },
   {
-    imageUrl: "images/20250916_134016.jpg",
+    imageUrl: "images/LSIL 1.JPG",
     title: "LSIL",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, anormalidad de células epiteliales agarndamiento nuclear leve, abundantes PMN, aumento de relación N/C y células anfofilicas"
   },
   {
-    imageUrl: "images/20250916_140259.jpg",
+    imageUrl: "images/LSIL 2.JPG",
     title: "LSIL",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, véase las celulas en grupo con bordes citoplásmicos bien definidos, PMN abundantes y binucleación"
   },
   {
-    imageUrl: "images/20251002_130607.jpg",
+    imageUrl: "images/LSIL 3.JPG",
     title: "LSIL",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, nótese las células con elevada R N/C y cromatina irregular"
   },
   {
-    imageUrl: "images/20251002_125315.jpg",
+    imageUrl: "images/LSIL 4.JPG",
     title: "LSIL",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, con notable aumento de los tamaños nucleares y relación N/C elevada"
   },
   {
-    imageUrl: "images/20251002_133712.jpg",
+    imageUrl: "images/LSIL 5.jpg",
     title: "LSIL",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, véase la pequeña célula coilocitica justo arriba de la celula binucleada en el medio"
   },
   {
-    imageUrl: "images/20251017_130615.jpg",
+    imageUrl: "images/LSIL 6.JPG",
     title: "LSIL",
-    description: ""
+    description: "Tipo de muestra: Exo-endo, obsérvese la célula coilocitica binucleada cianófila con su característico halo perinuclear, hallazgo clave de una LIE-BG"
   },
 ];
 
 const samplesContainer = document.getElementById('samples-container');
-const webPageTitle = document.getElementById('webpageTitle'); // SELECT THE H1 ELEMENT
+const webPageTitle = document.getElementById('webpageTitle');
+
+// Create lightbox element
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+lightbox.innerHTML = `
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged view">
+`;
+document.body.appendChild(lightbox);
+
+// Function to open lightbox
+function openLightbox(imageSrc, imageAlt) {
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imageSrc;
+    lightboxImg.alt = imageAlt;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+// Function to close lightbox
+function closeLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+// Close button event
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+
+// Close when clicking outside the image
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+// Close with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+        closeLightbox();
+    }
+});
 
 // Function to clear the current cards
 function clearSampleCards() {
@@ -164,6 +205,13 @@ function displaySamples(array) {
         image.src = sample.imageUrl;
         image.alt = sample.title;
         image.loading = 'lazy';
+        image.style.cursor = 'pointer'; // Show it's clickable
+        
+        // Add click event to open lightbox
+        image.addEventListener('click', () => {
+            openLightbox(sample.imageUrl, sample.title);
+        });
+        
         card.appendChild(image);
 
         // Create and append the description AFTER the image
@@ -194,14 +242,14 @@ navLinks.forEach(link => {
         switch(filter) {
             case 'Vaginosis Bacteriana':
                 titleText = 'Vaginosis Bacteriana (VB)';
-                filteredSamples = samples.filter(s => s.title === 'V'); // Use === for exact match
+                filteredSamples = samples.filter(s => s.title === 'V');
                 break;
             case 'Candida sp':
                 titleText = 'Candida sp (Candidiasis)';
                 filteredSamples = samples.filter(s => s.title === 'C');
                 break;
-            case 'Trichomonas Vaginalis': // FIXED: Capital V in Vaginalis
-                titleText = 'Trichomonas Vaginalis (TV)';
+            case 'Trichomonas Vaginalis':
+                titleText = 'Trichomonas Vaginalis (Trichomoniasis)';
                 filteredSamples = samples.filter(s => s.title === 'T');
                 break;
             case 'LSIL':
@@ -213,7 +261,6 @@ navLinks.forEach(link => {
                 filteredSamples = samples;
         }
 
-        // UPDATE THE H1 ELEMENT
         webPageTitle.textContent = titleText;
         displaySamples(filteredSamples);
     });
